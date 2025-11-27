@@ -1505,6 +1505,38 @@ margin-left: 50px;
     padding: 15px;
   }
 }
+/* ===== FIXED FULL TAB SECTION ===== */
+.full-tab-section {
+  padding: 60px 20px;
+  margin-bottom: 60px !important;
+}
+
+/* ===== FIXED ABOUT CARD (NO MORE SPACING BUG) ===== */
+.about-card {
+  margin: 60px auto 0;
+  width: 85%;
+  max-width: 1000px;
+  height: 460px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== KEEP EXISTING ANIMATION ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+
 
 
 </style>
@@ -1598,7 +1630,8 @@ margin-left: 50px;
 <!-- ============================ -->
 <!--         TAB SECTION          -->
 <!-- ============================ -->
-<section class="full-tab-section">
+<section class="full-tab-section" style=" margin-bottom: 60%;">
+
 
   <!-- Navigation Tabs -->
   <div class="nav-tabs">
@@ -1676,24 +1709,6 @@ margin-left: 50px;
 
 
 
-
-
-
-<script>
-const tabs = document.querySelectorAll(".nav-tabs .tab");
-const tabContents = document.querySelectorAll(".tab-content");
-
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    document.querySelector(".tab.active").classList.remove("active");
-    tab.classList.add("active");
-
-    const index = tab.dataset.index;
-    document.querySelector(".tab-content.active").classList.remove("active");
-    tabContents[index].classList.add("active");
-  });
-});
-</script>
 
 <section class="system-section">
   <div class="system-wrapper">

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCHOOL BUS  MEDIA</title>
+  <link rel="stylesheet" href="icon.jpg">
+  <link rel="icon" type="image/png" href="icon.jpg">\
+  <link rel="stylesheet" href="stye.c">
+
+<style>
+/* ------------------- GLOBAL ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ------------------- HEADER ------------------- */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.btn-demo {
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: 2px solid #00c77f;
+  background: white;
+  color: #00c77f;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-demo:hover {
+  background: #00c77f;
+  color: #fff;
+}
+
+/* ------------------- HERO ------------------- */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tilt-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+
+.tilt-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+  color: #000;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.btn-started {
+  margin-top: 20px;
+  background: black;
+  color: white;
+  padding: 14px 40px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-started:hover {
+  background: #333;
+}
+
+/* ------------------- MOBILE ------------------- */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="SchoolBus Media">
+  </div>
+
+  <button class="btn-demo">Request a demo</button>
+</header>
+
+<!-- ---------------- HERO SECTION ---------------- -->
+<section class="hero">
+
+  <div class="hero-bg">
+    <div class="tilt-card" id="tilt">
+      <img src="3d.png" />
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Standardizing<br>Content Marketing</h1>
+    <button class="btn-started">Get started</button>
+  </div>
+
+</section>
+<section class="value-add">
+  <div class="container">
+    <div class="person" style="margin-right:100px">
+      <img src="left veiw.png" alt="Professional Person">
+    </div>
+    <div class="stats" >
+      <div class="stat-card yellow">
+        <h2>300+ </h2>
+        <p>Creatives Collaborated</p>
+      </div>
+
+      <div class="stat-card white">
+        <h2>180+ </h2>
+        <p>Small and Big Brands Worked With!</p>
+      </div>
+
+      <div class="stat-card green">
+        <h2>VALUE ADD</h2>
+      </div>
+
+      <div class="stat-card blue">
+        <h2>100+</h2>
+        <p>Million Views</p>
+      </div>
+
+      <div class="stat-card orange">
+        <h2>65+</h2>
+        <p>Team Staff</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section>
+    <h1>WE’RE NOT A SOCIAL MEDIA CHOR</h1>
+    <p>
+     School Bus Media is a leading influencer and content marketing company connecting brands with the right audiences through impactful storytelling. We empower businesses with creative marketing solutions that drive engagement and growth while helping influencers secure meaningful collaborations, creating a balanced ecosystem of innovation, visibility, and authentic brand communication.
+
+    </p>
+
+    <div class="card">
+      <img src="2.png" alt="Delivery system image">
+      <div class="card-content">
+        <span>Discover now</span>
+        <h2>How the delivery<br>system works</h2>
+      </div>
+    </div>
+  </section>
+
+    <!-- Navigation -->
+  <div class="nav-tabs">
+    <div class="tab active" onclick="showTab(0)">Driver app</div>
+    <div class="tab" onclick="showTab(1)">Dashboard</div>
+    <div class="tab" onclick="showTab(2)">Customer portal</div>
+  </div>
+
+  <!-- Tab 1: Driver App -->
+  <div class="tab-content active">
+    <div class="features">
+      <div class="feature-item">
+        <div class="icon-box">📦</div>
+        <div>
+          <h3>Identifying Influencers matching the brand’s vibe.</h3>
+          <p></p>
+          
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">🔄</div>
+        <div>
+          <h3> Getting insights and stats of the influencer for better performance.</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">📊</div>
+        <div>
+          <h3>Informing influencers about the brand.</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">🧾</div>
+        <div>
+          <h3>Discussing promotions and understanding narratives.</span></h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">🗺️</div>
+        <div>
+          <h3>Aligning both influencer and brand on the same page.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-box">
+      <img src="Creatives.jpg" alt="Driver App Screenshot">
+    </div>
+  </div>
+
+  <!-- Tab 2: Dashboard -->
+  <div class="tab-content">
+    <div class="features">
+      <div class="feature-item">
+        <div class="icon-box">📍</div>
+        <div>
+          <h3>Understanding the brand’s marketing objectives.</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">📦</div>
+        <div>
+          <h3> Aligning narratives with the influencer’s style.</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">📈</div>
+        <div>
+          <h3>Crafting creative promotional content.</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">🔁</div>
+        <div>
+          <h3> Adding influencer’s personal touch for authenticity</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">🚚</div>
+        <div>
+          <h3>Finalizing all elements collaboratively.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-box">
+      <img src="NUDGE.jpg" alt="Dashboard Screenshot">
+    </div>
+  </div>
+
+  <!-- Tab 3: Customer Portal -->
+  <div class="tab-content">
+    <div class="features">
+      <div class="feature-item">
+        <div class="icon-box">✉️</div>
+        <div>
+          <h3> Brand’s name reaching millions through creative campaigns.</h3>
+<p></p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">🎨</div>
+        <div>
+          <h3>Setting new benchmarks in marketing standards.</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">📦</div>
+        <div>
+          <h3>Leveraging collaboration features on Instagram for visibility.</span></h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">💳</div>
+        <div>
+          <h3> Providing detailed post-campaign insights to brands.</h3>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon-box">📍</div>
+        <div>
+          <h3>Establishing long-term creative relationships with clients.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-box">
+      <img src="Creatives.jpg" alt="Customer Portal Screenshot">
+    </div>
+  </div>
+
+  <section class="system-section">
+    <div class="title-box">
+      Live updates with all functionality within one system
+    </div>
+
+    <div class="devices">
+      <!-- Left device -->
+      <div class="device">
+        <div class="device-label">
+          <div class="icon yellow">👥</div>
+          <span>Consumer portal</span>
+        </div>
+        <div class="connector"></div>
+        <img src="Results.jpg" alt="Consumer Portal" />
+      </div>
+
+      <!-- Center device -->
+      <div class="device">
+        <div class="device-label">
+          <div class="icon green" >📊</div>
+          <span>Dashboard</span>
+        </div>
+        <div class="connector"></div>
+        <img src="NUDGE.jpg" alt="Dashboard" />
+      </div>
+
+      <!-- Right device -->
+      <div class="device">
+        <div class="device-label">
+          <div class="icon blue">🚚</div>
+          <span>Driver app</span>
+        </div>
+        <div class="connector"></div>
+        <img src="Creatives.jpg" alt="Driver App" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section class="media-gallery">
+  <h2>SCHOOL BUS MEDIA</h2>
+
+  <div class="gallery-row">
+
+    <!-- 1: Creative Designing Lead -->
+    <div class="gallery-item">
+      <img src="1.jpg" alt="Navneet - Creative Designing Lead">
+      <div class="gallery-overlay">
+        <h3>Creative Designing Lead</h3>
+        <h4>Navneet</h4>
+        <p>At SchoolBusMedia, Navneet is the master of creativity blended with attention in the times of zoned-out consumers.</p>
+      </div>
+    </div>
+
+    <!-- 2: Research and Publishing Specialist -->
+    <div class="gallery-item">
+      <img src="2.jpg" alt="Abhiram - Research and Publishing Specialist">
+      <div class="gallery-overlay">
+        <h3>Research & Publishing Specialist</h3>
+        <h4>Abhiram</h4>
+        <p>Abhiram is a student of internet trends, stopping by every media wave, collecting virality formulas for your promotion.</p>
+      </div>
+    </div>
+
+    <!-- 3: Marketing Team Head -->
+    <div class="gallery-item">
+      <img src="3.jpg" alt="XYZ - Marketing Team Head">
+      <div class="gallery-overlay">
+        <h3>Marketing Team Head</h3>
+        <h4>XYZ</h4>
+        <p>At SchoolBusMedia, XYZ captures the essence of young minds and shapes promotions that resonate with audiences.</p>
+      </div>
+    </div>
+
+    <!-- 4: Content Writing Consultant -->
+    <div class="gallery-item">
+      <img src="4.jpg" alt="Ajay - Content Writing Consultant">
+      <div class="gallery-overlay">
+        <h3>Content Writing Consultant</h3>
+        <h4>Ajay</h4>
+        <p>Ajay is a young storyteller who distills brand narratives into captivating 60-second messages that speak universally.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br>
+ <div class="demo-section">
+    <h1>Make your<br>delivery easy</h1>
+    <p>Secure Your Free Demo Session Now!</p>
+
+    <form class="demo-form">
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Message or Company Name" required>
+      <button type="submit">Request a demo</button>
+    </form>
+  </div><br><br><br><br><br><br><br>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo and About -->
+    <div class="footer-about">
+      <div class="footer-logo">
+        <img src="logo.png" alt="School Bus Media Logo">
+        <h2>School Bus Media</h2>
+      </div>
+      <p>
+        We’re redefining content and influencer marketing for brands that want
+        impact. Our creative strategies ensure your message reaches the right audience,
+        every single time.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Get In Touch</h3>
+      <ul>
+        <li>📧 info@schoolbusmedia.com</li>
+        <li>📞 +91 98765 43210</li>
+        <li>📍 Bengaluru, India</li>
+      </ul>
+
+      <!-- Social Media (Pure CSS) -->
+      <div class="footer-social">
+        <a href="https://facebook.com" class="social facebook" target="_blank" aria-label="Facebook"></a>
+        <a href="https://instagram.com" class="social instagram" target="_blank" aria-label="Instagram"></a>
+        <a href="https://linkedin.com" class="social linkedin" target="_blank" aria-label="LinkedIn"></a>
+        <a href="https://youtube.com" class="social youtube" target="_blank" aria-label="YouTube"></a>
+        <a href="https://twitter.com" class="social twitter" target="_blank" aria-label="Twitter"></a>
+        <a href="https://tiktok.com" class="social tiktok" target="_blank" aria-label="TikTok"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <span>School Bus Media</span>. All rights reserved.</p>
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+<!-- ------------------- JAVASCRIPT ------------------- -->
+<script>
+// 3D Tilt Effect
+const card = document.getElementById("tilt");
+
+card.addEventListener("mousemove", (e) => {
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  const rotateX = ((y - centerY) / centerY) * 8;
+  const rotateY = ((x - centerX) / centerX) * 8;
+
+  card.style.transform = `
+    perspective(1000px)
+    rotateX(${-rotateX}deg)
+    rotateY(${rotateY}deg)
+    scale(1.03)
+  `;
+});
+
+card.addEventListener("mouseleave", () => {
+  card.style.transform = `
+    perspective(1000px)
+    rotateX(0deg)
+    rotateY(0deg)
+    scale(1)
+  `;
+});
+</script>
+
+</body>
+</html>

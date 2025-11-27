@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCHOOL BUS  MEDIA</title>
+  <link rel="stylesheet" href="icon.jpg">
+  <link rel="icon" type="image/png" href="icon.jpg">
+
+<style>
+/* ------------------- GLOBAL ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ------------------- HEADER ------------------- */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.btn-demo {
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: 2px solid #00c77f;
+  background: white;
+  color: #00c77f;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-demo:hover {
+  background: #00c77f;
+  color: #fff;
+}
+
+/* ------------------- HERO ------------------- */
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tilt-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+
+.tilt-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+  color: #000;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.btn-started {
+  margin-top: 20px;
+  background: black;
+  color: white;
+  padding: 14px 40px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-started:hover {
+  background: #333;
+}
+
+/* ------------------- MOBILE ------------------- */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+.value-add {
+  width: 100%;
+  padding: 80px 20px;
+  background-image: url("2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.va-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+
+/* Left image */
+.va-person img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0px); }
+}
+
+
+/* RIGHT CARDS */
+.va-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.va-card {
+  padding: 25px 28px;
+  border-radius: 12px;
+  font-family: "Poppins";
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* FLOAT ANIMATION */
+.float {
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+.float.slow {
+  animation: cardFloat 4.5s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+
+/* COLORS */
+.yellow { background: #F9FF4B; color: #000; }
+.white  { background: #fff; color: #000; }
+.green  { background: #74E44A; color: #000; grid-column: span 2; }
+.blue   { background: #4CBFFF; color: #000; }
+.orange { background: #FF6B1A; color: #fff; }
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .va-container { flex-direction: column; }
+  .va-person img { width: 260px; height: 340px; }
+}
+
+@media (max-width: 600px) {
+  .va-stats { grid-template-columns: 1fr; }
+  .green { grid-column: span 1; }
+}
+.about-section {
+  padding: 100px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-section h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.about-section p {
+  font-size: 17px;
+  color: #333;
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* CARD */
+.about-card {
+  margin: 60px auto 0;
+  width: 85%;
+  max-width: 1000px;
+  height: 460px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.about-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK GRADIENT OVERLAY */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0)
+  );
+  z-index: 1;
+}
+
+/* TEXT INSIDE CARD */
+.card-text {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  z-index: 2;
+  text-align: left;
+}
+
+.card-text span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d8ff49;
+  letter-spacing: 1px;
+}
+
+.card-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* ---------- SMOOTH FADE-UP ANIMATION (LIKE VIDEO) ---------- */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+
+/* -------- MOBILE -------- */
+@media (max-width: 900px) {
+  .about-section h1 {
+    font-size: 40px;
+  }
+  .about-card {
+    height: 360px;
+  }
+  .card-text {
+    left: 25px;
+    bottom: 25px;
+  }
+  .card-text h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section h1 {
+    font-size: 32px;
+  }
+  .about-card {
+    width: 100%;
+    height: 300px;
+  }
+  .card-text h2 {
+    font-size: 22px;
+  }
+}
+/* --- Tabs wrapper --- */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  background: #141414;
+  border-radius: 50px;
+  margin: 60px auto 30px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+}
+
+.nav-tabs .tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px 0;
+  font-weight: 500;
+  color: #bbbbbb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.nav-tabs .tab.active {
+  background: #32d37a;
+  color: #000;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+/* --- Tab content layout --- */
+.tab-content {
+  display: none;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  background: #141414;
+  border-radius: 24px;
+  padding: 40px;
+  gap: 32px;
+  align-items: center;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.tab-content.active {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeSlideIn 0.5s ease-out;
+}
+
+/* Fade + slide effect when switching */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left column: features */
+.features {
+  flex: 1 1 320px;
+  padding-right: 20px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: featureFade 0.5s ease-out forwards;
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.08s; }
+.feature-item:nth-child(2) { animation-delay: 0.16s; }
+.feature-item:nth-child(3) { animation-delay: 0.24s; }
+.feature-item:nth-child(4) { animation-delay: 0.32s; }
+.feature-item:nth-child(5) { animation-delay: 0.40s; }
+
+@keyframes featureFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.feature-item h3 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Right column: image */
+.image-box {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+/* Soft floating motion on image */
+@keyframes floatImg {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* --- System section (devices row) --- */
+.system-section {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.title-box {
+  background: #2b2b2b;
+  padding: 16px 32px;
+  border-radius: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Devices row */
+.devices {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+/* Each device */
+.device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: floatDevice 4.5s ease-in-out infinite;
+}
+
+.device:nth-child(2) { animation-delay: 0.4s; }
+.device:nth-child(3) { animation-delay: 0.8s; }
+
+@keyframes floatDevice {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.device img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 26px;
+  background: #111;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* Labels above devices */
+.device-label {
+  position: absolute;
+  top: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.device-label span {
+  background: #222;
+  padding: 9px 20px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* Icon pill */
+.icon.pill {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #000;
+}
+
+.icon.pill.yellow { background: #c6ff4d; }
+.icon.pill.green  { background: #00c77f; }
+.icon.pill.blue   { background: #3bb2ff; }
+
+/* Vertical dotted connectors */
+.connector {
+  position: absolute;
+  top: -60px;
+  width: 2px;
+  height: 60px;
+  border-left: 2px dotted rgba(255, 255, 255, 0.4);
+}
+
+/* Horizontal dotted line across */
+.devices::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 10%;
+  width: 80%;
+  border-top: 2px dotted rgba(255, 255, 255, 0.4);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .tab-content {
+    flex-direction: column;
+    padding: 30px 24px;
+  }
+  .features {
+    padding-right: 0;
+  }
+  .image-box {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .system-section {
+    padding: 70px 20px;
+  }
+  .devices {
+    flex-direction: column;
+    gap: 90px;
+  }
+  .devices::before,
+  .connector {
+    display: none;
+  }
+  .device img {
+    max-width: 260px;
+  }
+  .device-label {
+    top: -70px;
+  }
+}
+        /* --- Section Background --- */
+.system-section {
+  background: #0d0d0d;
+  padding: 80px 20px 100px;
+  color: #fff;
+  text-align: center;
+}
+
+/* --- Wrapper --- */
+.system-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Title Bubble --- */
+.system-title {
+  display: inline-block;
+  padding: 18px 40px;
+  background: #2b2b2b;
+  border-radius: 26px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* --- Top icons row with dotted connector --- */
+.system-top-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto 50px;
+  max-width: 700px;
+  position: relative;
+  padding-top: 40px;
+}
+
+/* dotted line */
+.system-top-icons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  border-top: 2px dashed rgba(255,255,255,0.4);
+}
+
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 10px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.yellow { background: #d8ff4c; }
+.green  { background: #32d37a; }
+.blue   { background: #4cbfff; }
+
+.icon-block p {
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+/* --- 3 Columns layout --- */
+.system-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+/* Device styling */
+.device {
+  padding: 12px;
+  background: #000;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.65);
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.device img {
+  width: 100%;
+  display: block;
+  border-radius: 22px;
+}
+
+.device.tablet {
+  padding: 14px;
+  border-radius: 36px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .system-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .system-top-icons {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .system-title {
+    font-size: 18px;
+    padding: 14px 25px;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+}
+/* ===== MAIN WRAPPER ===== */
+.team-gallery {
+  max-width: 1250px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.team-gallery h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+/* ===== GRID ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* ===== CARD ===== */
+.team-card {
+  position: relative;
+  width: 260px;
+  height: 330px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.45s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.4);
+}
+
+/* ===== OVERLAY CONTENT ===== */
+.team-info {
+  position: absolute;
+  inset: 0;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.team-card:hover .team-info {
+  opacity: 1;
+}
+
+.team-info h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #00ff88;
+  margin-bottom: 4px;
+}
+
+.team-info h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.team-info p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .team-card {
+    width: 100%;
+    height: 290px;
+  }
+}
+/* -------------------- FOOTER -------------------- */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 70px 20px 20px;
+  margin-top: 80px;
+  border-radius: 40px 40px 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-about {
+  flex: 1 1 280px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: auto;
+}
+
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links {
+  flex: 1 1 180px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #32d37a;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.social {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #222;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.social:hover {
+  background: #32d37a;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom span {
+  color: #32d37a;
+}
+
+.footer-bottom a {
+  font-size: 13px;
+  color: #999;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #32d37a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 20px;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+/* CONTACT SECTION */
+.contact-section {
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 550px;
+  margin: auto;
+}
+
+.contact-section h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 12px;
+  background: #f3f3f3;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #00c77f;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00c77f;
+  color: #000;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .contact-section h1 {
+    font-size: 32px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ---------------- HEADER ---------------- -->
+<header>
+  <div class="logo">
+    <img src="logo r.png" alt="SchoolBus Media">
+  </div>
+
+  <button class="btn-demo">Request a demo</button>
+</header>
+
+<!-- ---------------- HERO SECTION ---------------- -->
+<section id="home" class="hero">
+
+  <div class="hero-bg">
+    <div class="tilt-card" id="tilt">
+      <img src="3d.png" />
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Standardizing<br>Content Marketing</h1>
+    <button class="btn-started">Get started</button>
+  </div>
+
+</section>
+
+<section id="about" class="value-add">
+  <div class="va-container">
+
+    <div class="va-person">
+      <img src="left veiw.png" alt="Professional Person">
+    </div>
+
+    <div class="va-stats">
+
+      <div class="va-card yellow float">
+        <h2>300+</h2>
+        <p>Creatives Collaborated</p>
+      </div>
+
+      <div class="va-card white float">
+        <h2>180+</h2>
+        <p>Small and Big Brands Worked With!</p>
+      </div>
+
+      <div class="va-card green float slow">
+        <h2>VALUE ADD</h2>
+      </div>
+
+      <div class="va-card blue float">
+        <h2>100+</h2>
+        <p>Million Views</p>
+      </div>
+
+      <div class="va-card orange float slow">
+        <h2>65+</h2>
+        <p>Team Staff</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="process" class="about-section">
+
+  <h1 class="fade-up">WE’RE NOT A SOCIAL MEDIA CHOR</h1>
+
+  <p class="fade-up delay-1">
+    School Bus Media is a leading influencer and content marketing company connecting brands with the right audiences 
+    through impactful storytelling. We empower businesses with creative marketing solutions that drive engagement and 
+    growth while helping influencers secure meaningful collaborations, creating a balanced ecosystem of innovation, 
+    visibility, and authentic brand communication.
+  </p>
+
+  <div class="about-card fade-up delay-2">
+    <img src="2.png" alt="Delivery system image">
+
+    <div class="card-overlay"></div>
+
+    <div class="card-text">
+      <span>Discover now</span>
+      <h2>How the delivery<br>system works</h2>
+    </div>
+  </div>
+
+</section >
+<!-- Navigation -->
+<div class="nav-tabs">
+  <div class="tab active" data-index="0">Results</div>
+  <div class="tab" data-index="1">NUDGE</div>
+  <div class="tab" data-index="2">Creatives</div>
+</div>
+
+<!-- Tab 1: Driver App -->
+<div class="tab-content active">
+  <div class="features">
+    <div class="feature-item">
+      <div class="icon-box">📦</div>
+      <div>
+        <h3>Identifying influencers matching the brand’s vibe.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">🔄</div>
+      <div>
+        <h3>Getting insights and stats of the influencer for better performance.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">📊</div>
+      <div>
+        <h3>Informing influencers about the brand.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">🧾</div>
+      <div>
+        <h3>Discussing promotions and understanding narratives.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">🗺️</div>
+      <div>
+        <h3>Aligning both influencer and brand on the same page.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="Creatives.jpg" alt="Driver App Screenshot">
+  </div>
+</div>
+
+<!-- Tab 2: Dashboard -->
+<div class="tab-content">
+  <div class="features">
+    <div class="feature-item">
+      <div class="icon-box">📍</div>
+      <div>
+        <h3>Understanding the brand’s marketing objectives.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">📦</div>
+      <div>
+        <h3>Aligning narratives with the influencer’s style.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">📈</div>
+      <div>
+        <h3>Crafting creative promotional content.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">🔁</div>
+      <div>
+        <h3>Adding influencer’s personal touch for authenticity.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">🚚</div>
+      <div>
+        <h3>Finalizing all elements collaboratively.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="NUDGE.jpg" alt="Dashboard Screenshot">
+  </div>
+</div>
+
+<!-- Tab 3: Customer Portal -->
+<div class="tab-content">
+  <div class="features">
+    <div class="feature-item">
+      <div class="icon-box">✉️</div>
+      <div>
+        <h3>Brand’s name reaching millions through creative campaigns.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">🎨</div>
+      <div>
+        <h3>Setting new benchmarks in marketing standards.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">📦</div>
+      <div>
+        <h3>Leveraging collaboration features on Instagram for visibility.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">💳</div>
+      <div>
+        <h3>Providing detailed post-campaign insights to brands.</h3>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-box">📍</div>
+      <div>
+        <h3>Establishing long-term creative relationships with clients.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="Creatives.jpg" alt="Customer Portal Screenshot">
+  </div>
+</div>
+
+<section class="system-section" >
+  <div class="system-wrapper">
+
+    <!-- Title bubble -->
+    <div id="system" class="system-title">
+      Live updates with all functionality within one system
+    </div>
+
+    <!-- Dotted top icons -->
+    <div class="system-top-icons">
+      <div class="icon-block">
+        <div class="icon-box yellow">👥</div>
+        <p>Results</p>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-box green">📊</div>
+        <p>NUDGE</p>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-box blue">🚗</div>
+        <p>Creatives</p>
+      </div>
+    </div>
+
+    <!-- 3 Column Devices -->
+    <div class="system-columns">
+
+      <!-- Column 1 -->
+      <div class="sys-col">
+        <div class="device">
+          <img src="Results.jpg" alt="Consumer Portal">
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="sys-col">
+        <div class="device tablet">
+          <img src="NUDGE.jpg" alt="Dashboard">
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="sys-col">
+        <div class="device">
+          <img src="Creatives.jpg" alt="Driver App">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="team-gallery" id="team">
+  <h2>SCHOOL BUS MEDIA</h2>
+
+  <div class="team-grid">
+
+    <!-- 1 -->
+    <div class="team-card">
+      <img src="1.jpg" alt="Navneet - Creative Designing Lead">
+      <div class="team-info">
+        <h3>Creative Designing Lead</h3>
+        <h4>Navneet</h4>
+        <p>At SchoolBusMedia, Navneet is the master of creativity blended with attention in the times of zoned-out consumers.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="team-card">
+      <img src="2.jpg" alt="Abhiram - Research Specialist">
+      <div class="team-info">
+        <h3>Research & Publishing Specialist</h3>
+        <h4>Abhiram</h4>
+        <p>Abhiram is a student of internet trends, collecting virality formulas for your promotion.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="team-card">
+      <img src="3.jpg" alt="XYZ - Marketing Team Head">
+      <div class="team-info">
+        <h3>Marketing Team Head</h3>
+        <h4>XYZ</h4>
+        <p>XYZ captures the essence of young minds and shapes promotions that resonate deeply.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="team-card">
+      <img src="4.jpg" alt="Ajay - Content Writer">
+      <div class="team-info">
+        <h3>Content Writing Consultant</h3>
+        <h4>Ajay</h4>
+        <p>Ajay distills brand narratives into captivating content that speaks universally.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <h1>Get in touch with our creative team</h1>
+  <p>Secure your free demo session now!</p>
+
+  <form class="contact-form">
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Message or Company Name" required>
+    <button type="submit">Request a demo</button>
+  </form>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-about">
+      <div class="footer-logo">
+        <img src="icon r.png" alt="School Bus Media Logo">
+        <h2>School Bus Media</h2>
+      </div>
+
+      <p>
+        We’re redefining content and influencer marketing for brands that want
+        impact. Our creative strategies ensure your message reaches the right audience,
+        every single time.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS with Navigation -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#system">System</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-contact">
+      <h3>Get In Touch</h3>
+      <ul>
+        <li>📧 info@schoolbusmedia.com</li>
+        <li>📞 +91 98765 43210</li>
+        <li>📍 Bengaluru, India</li>
+      </ul>
+
+
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    <p>© 2025 <span>School Bus Media</span>. All rights reserved.</p>
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+
+
+
+
+<!-- ------------------- JAVASCRIPT ------------------- -->
+<script>
+// 3D Tilt Effect
+const card = document.getElementById("tilt");
+
+card.addEventListener("mousemove", (e) => {
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  const rotateX = ((y - centerY) / centerY) * 8;
+  const rotateY = ((x - centerX) / centerX) * 8;
+
+  card.style.transform = `
+    perspective(1000px)
+    rotateX(${-rotateX}deg)
+    rotateY(${rotateY}deg)
+    scale(1.03)
+  `;
+});
+
+card.addEventListener("mouseleave", () => {
+  card.style.transform = `
+    perspective(1000px)
+    rotateX(0deg)
+    rotateY(0deg)
+    scale(1)
+  `;
+});
+
+// Slow lift on hover
+document.querySelectorAll('.va-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = "translateY(-20px) scale(1.03)";
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = "translateY(0px) scale(1)";
+  });
+});
+// Reveal on scroll
+const revealEls = document.querySelectorAll(".fade-up");
+
+function revealOnScroll() {
+  revealEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+
+const tabs = document.querySelectorAll(".tab");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach((tab, i) => {
+  tab.addEventListener("click", () => {
+
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    contents.forEach(c => c.classList.remove("active"));
+
+    void contents[i].offsetWidth; // restart animation
+
+    contents[i].classList.add("active");
+  });
+});
+
+// Smooth scroll for footer Quick Links
+document.querySelectorAll('.footer-links a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+
+</script>
+
+</body>
+</html>
